@@ -1,0 +1,178 @@
+@import url(./variables.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--verydarkBlue);
+    color: #fff;
+    font-family: 'Rubik', sans-serif;
+    font-size: var(--fontSize);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;    
+    margin: 0 auto;
+}
+
+.mainContent {
+    height: auto;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 24% 24% 24% 24%;
+    justify-content: center;
+    grid-template-areas: "a1 a2 a4 a6"
+                         "a1 a3 a5 a7";
+    gap: 30px;
+}
+
+.containerProfile{
+    grid-area: a1;
+}
+.work {
+    grid-area: a2;
+}
+.exercise {
+    grid-area: a3;
+}
+.play {
+    grid-area: a4;
+}
+.social {
+    grid-area: a5;
+}
+.study {
+    grid-area: a6;
+}
+.selfCare {
+    grid-area: a7;
+}
+
+.containerProfile {
+    background-color: var(--darkBlue);
+    border-radius: 15px;
+}
+
+.containerProfile > p {
+    padding: 20px 15px 0 30px;
+    color: var(--paleBlue);
+    font-weight: 300;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+.containerProfile > p:last-child {
+    padding-bottom: 25px;
+}
+
+.containerProfile > p.selected, .containerProfile > p:hover {
+    color: #fff;
+}
+
+.cardProfile {
+    border-radius: 15px;
+    background-color: var(--blue);
+    width: 100%;
+    padding: 30px 30px 80px 30px;
+}
+
+.cardProfile img {
+    width: 80px;
+    border: 3px solid;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+.cardProfile p {
+    font-size: 0.9rem;
+    color: var(--paleBlue);
+}
+
+.cardProfile h2 {
+    font-size: 2.2rem;
+}
+
+.cardProfile p, .cardProfile h2{
+    font-weight: 300;
+}
+
+.caseModel{
+    position: relative;
+    padding-top: 25px;
+    overflow: hidden;
+}
+
+.caseModel, .informationCard {
+    border-radius: 15px;
+}
+
+.caseModel > img {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+}
+
+.informationCard {
+    background-color: var(--darkBlue);
+    position: relative;
+    padding: 30px;
+    transition: all 500ms ease;
+    bottom: -20px;
+}
+
+.informationCard .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.informationCard .header img:hover {
+    cursor: pointer;
+}
+
+.informationCard h2 {
+    font-weight: 300;
+    font-size: 3.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.informationCard span {
+    color: var(--paleBlue);
+    font-size: 0.8rem;
+}
+
+.informationCard:hover {
+    filter:brightness(130%);
+}
+
+.caseModel.work {
+    background-color: var(--lightred);
+}
+
+.caseModel.exercise {
+    background-color: var(--limeGreen);
+}
+
+.caseModel.play {
+    background-color: var(--softBlue);
+}
+
+.caseModel.social {
+    background-color: var(--violet);
+}
+
+.caseModel.study {
+    background-color: var(--lightRed);
+}
+
+.caseModel.selfCare {
+    background-color: var(--softOrange);
+}
