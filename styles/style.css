@@ -72,7 +72,7 @@ body {
     padding-bottom: 25px;
 }
 
-.containerProfile  .paragraphs p.selected, .containerProfile .paragraphs p:hover {
+.containerProfile  .paragraphs [selected], .containerProfile .paragraphs p:hover {
     color: #fff;
 }
 
@@ -197,6 +197,10 @@ body {
     }
     .containerProfile .paragraphs{
        display: flex;
+       justify-content: space-between;
+    }
+    .containerProfile .paragraphs p, .containerProfile .paragraphs p:last-child {
+        padding: 20px;
     }
     .cardProfile {
         display: flex;
