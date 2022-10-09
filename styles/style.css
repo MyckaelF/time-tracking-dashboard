@@ -60,7 +60,7 @@ body {
     border-radius: 15px;
 }
 
-.containerProfile > p {
+.containerProfile  .paragraphs p {
     padding: 20px 15px 0 30px;
     color: var(--paleBlue);
     font-weight: 300;
@@ -68,11 +68,11 @@ body {
     transition: all 500ms ease;
 }
 
-.containerProfile > p:last-child {
+.containerProfile .paragraphs p:last-child {
     padding-bottom: 25px;
 }
 
-.containerProfile > p.selected, .containerProfile > p:hover {
+.containerProfile  .paragraphs p.selected, .containerProfile .paragraphs p:hover {
     color: #fff;
 }
 
@@ -175,4 +175,52 @@ body {
 
 .caseModel.selfCare {
     background-color: var(--softOrange);
+}
+
+.attribution {
+    text-align: center;
+}
+
+.attribution a {
+    color: #fff;
+}
+
+@media (max-width: 800px) {
+
+    .container {
+        height: auto;
+        padding-top: 40px;
+    }
+    .mainContent {
+        display: flex;
+        flex-direction: column;
+    }
+    .containerProfile .paragraphs{
+       display: flex;
+    }
+    .cardProfile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px;
+    }
+    .cardProfile h2 {
+        font-size: 1.3rem;
+    }
+    .cardProfile img {
+        margin: 0;
+    }
+    .caseModel .hours {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .caseModel .hours h2 {
+        font-size: 2rem;
+        margin: 0;
+    }
+    .attribution {
+        margin-top: 10px;
+        font-size: 0.7rem;
+    }
 }
